@@ -1,15 +1,8 @@
-import { Inter } from '@next/font/google'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React, { useState } from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false) // <1>
-  const toggleDropdown = (event: MouseEvent) => {
-    event.preventDefault()
-    setIsOpen(!isOpen)
-  }
 
   const hideDropdown = () => {
     setIsOpen(false)
@@ -28,7 +21,6 @@ export default function Home() {
             id="navbarDropdown"
             role="button"
             aria-expanded={isOpen}
-            onClick={toggleDropdown}
           >
             {' '}
             {/* <2> */}
@@ -87,3 +79,5 @@ export default function Home() {
     </nav>
   )
 }
+
+export default NavBar
