@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import LoginForm from '../components/molecules/LoginForm'
+import ListGroups from '../components/organisms/ListGroup'
 import NavBar from '../components/organisms/Navbar'
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <NavBar />
       <Container>
         <h1>Welcome</h1>
-        <LoginForm />
+        <ListGroups />
       </Container>
     </>
   )

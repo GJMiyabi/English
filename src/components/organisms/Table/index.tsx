@@ -1,38 +1,55 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 
-function TableItem() {
+type ProjectItems = {
+  atomsItem: number | string | null
+  moleculesItem: number | string | null
+}
+
+const ProjectTableItem = (props: ProjectItems) => {
   return (
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>プロパティ</th>
+          <th>データ</th>
+          <th>テスト</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td align="center">Variables/Constant</td>
+          <td align="center">0</td>
+          <td align="center">0</td>
         </tr>
         <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td align="center">Atoms</td>
+          <td align="center">{props.atomsItem}0</td>
+          <td align="center">0</td>
         </tr>
         <tr>
-          <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
+          <td align="center">Molecules</td>
+          <td align="center">0</td>
+          <td align="center">0</td>
+        </tr>
+        <tr>
+          <td align="center">Organisims</td>
+          <td align="center">0</td>
+          <td align="center">0</td>
+        </tr>
+        <tr>
+          <td align="center">Template</td>
+          <td align="center">0</td>
+          <td align="center">0</td>
+        </tr>
+        <tr>
+          <td align="center">Pages</td>
+          <td align="center">0</td>
+          <td align="center">0</td>
         </tr>
       </tbody>
     </Table>
   )
 }
 
-export default TableItem
+export default ProjectTableItem
